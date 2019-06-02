@@ -3,6 +3,8 @@ bin/
 obj/
 NovelWeb/bin/
 NovelWeb/obj/
+Common/bin/
+Common/obj/
 .vs/
 
 # Log Files
