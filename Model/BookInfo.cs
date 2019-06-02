@@ -50,13 +50,16 @@ namespace Model
         // 文件夹名
         public string FloderName { get; set; }
 
-        [ForeignKey("Id")]
+        [ForeignKey("BookType")]
         // 小说类型
         public int Type_Id { get; set; }
         
         // 上传者id
         public int UpUser_Id { get; set; }
 
-        public ICollection<BookType> BookType { get; set; }
+        // 封面图片
+        public string CoverImg { get; set; }
+
+        public BookType BookType { get; set; }
     }
 }

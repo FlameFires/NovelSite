@@ -51,7 +51,7 @@ namespace NovelWeb
                 app.UseExceptionHandler("/Home/Error");
             }
 
-
+            // 自动创建数据库
             using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
             {
                 // 获取EF上下文

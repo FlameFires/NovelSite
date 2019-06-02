@@ -149,7 +149,7 @@ using NovelWeb.Models;
             WriteLiteral("\r\n\r\n<!--new header-->\r\n<div class=\"header\">\r\n    <div class=\"inner\">\r\n        <div class=\"tophead\">\r\n            <!-- logo -->\r\n            <div class=\"logo lf\"><a href=\"https://www.ertongtuku.com/\" title=\"二筒阅读网\">");
             EndContext();
             BeginContext(3253, 29, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e08a8cf1e1c346dbaad0e8253d96704d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "0a958c1c1c514daead0a8d1e15d3b348", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -167,7 +167,7 @@ using NovelWeb.Models;
             WriteLiteral("</a></div>\r\n            <!-- 搜索 -->\r\n            <div class=\"search lf\">\r\n                ");
             EndContext();
             BeginContext(3372, 490, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "254748d1f90f4d6e9af1c4e7de954bca", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f69a0a2bca254ea9a1ad1d836e09de2a", async() => {
                 BeginContext(3477, 378, true);
                 WriteLiteral(@"
                     <input type=""text"" name=""q"" id=""q"" placeholder=""请输入书名/作者/标签"" autocomplete=""off"" value="""" class=""search-key"">
@@ -257,7 +257,7 @@ using NovelWeb.Models;
                 <p class=""pic"">");
             EndContext();
             BeginContext(6347, 78, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "3090a8f86c264b46b797e169816b41db", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4ae87c9219194b28a35909a9da2d61c1", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -291,7 +291,7 @@ using NovelWeb.Models;
             WriteLiteral("      <dt><a href=\"https://www.ertongtuku.com/yuedu/xiaoshuo/45383.html\" target=\"_blank\">");
             EndContext();
             BeginContext(8562, 78, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "cf824ecc31534e0784259028f0f63013", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "ad369d949b624c4f9592a721393401ee", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -359,7 +359,7 @@ using NovelWeb.Models;
                     <li><a href=""https://www.ertongtuku.com/yuedu/zt/25.html"" target=""_blank"">");
             EndContext();
             BeginContext(12093, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "439c1ab510b943d7adf7348c63054423", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "74b7850c48ba4310a7e5044e64cd9b70", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -378,7 +378,7 @@ using NovelWeb.Models;
             WriteLiteral("<span>总裁</span></a></li>\r\n                    <li><a href=\"https://www.ertongtuku.com/yuedu/zt/24.html\" target=\"_blank\">");
             EndContext();
             BeginContext(12274, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4e010b13c972421ba8cc21d8e3a86afe", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "abc9d98cadf34a35b30f4129743a278c", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -397,7 +397,7 @@ using NovelWeb.Models;
             WriteLiteral("<span>豪门</span></a></li>\r\n                    <li><a href=\"https://www.ertongtuku.com/yuedu/zt/23.html\" target=\"_blank\">");
             EndContext();
             BeginContext(12455, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "18be427bd0b14a5a8c19dee1aa260af4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "21ea5f3d16d04acc81e77cc048900faf", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -424,7 +424,7 @@ using NovelWeb.Models;
                         <a class=""pic"" href=""https://www.ertongtuku.com/yuedu/xiaoshuo/45295.html"" target=""_blank"">");
             EndContext();
             BeginContext(12844, 74, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "74617655c93140e78387e61b4b7e22e7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7dff8fdbcd2340a49a9dfcd4e7dd7240", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -449,7 +449,7 @@ using NovelWeb.Models;
                         <a class=""pic"" href=""https://www.ertongtuku.com/yuedu/xiaoshuo/45198.html"" target=""_blank"">");
             EndContext();
             BeginContext(13255, 78, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "81c9d6c6251a4f21bec6d1d64495c7af", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "eaf41cacf8b34da6903fb93373e8e7dc", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -474,7 +474,7 @@ using NovelWeb.Models;
                         <a class=""pic"" href=""https://www.ertongtuku.com/yuedu/xiaoshuo/45160.html"" target=""_blank"">");
             EndContext();
             BeginContext(13673, 80, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8598bea2ce9a44389b787280d08a9148", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "6713bf81636944fa96e482e7b29d1fc9", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -499,7 +499,7 @@ using NovelWeb.Models;
                         <a class=""pic"" href=""https://www.ertongtuku.com/yuedu/xiaoshuo/45121.html"" target=""_blank"">");
             EndContext();
             BeginContext(14096, 75, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7326c45de4624e8fa36fdbd66e54ccbc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7e4b274bf54f44188402df440b272ad4", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -524,7 +524,7 @@ using NovelWeb.Models;
                         <a class=""pic"" href=""https://www.ertongtuku.com/yuedu/xiaoshuo/44964.html"" target=""_blank"">");
             EndContext();
             BeginContext(14510, 79, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "409c4e9fad3345fc9476295ac3ff46de", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "c34c3fca263c4b04b063ffeaeb1613f8", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

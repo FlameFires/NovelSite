@@ -20,6 +20,7 @@ namespace Model
 
             var Accounts = new Account[]
             {
+                new Account{Name="Admin",Phone="Admin",IsAdmin=true, CreateDateTime=DateTime.Parse("2005-09-01")},
                 new Account{Name="Carson",Phone="Alexander",CreateDateTime=DateTime.Parse("2005-09-01")},
                 new Account{Name="Meredith",Phone="Alonso",CreateDateTime=DateTime.Parse("2002-09-01")},
                 new Account{Name="Arturo",Phone="Anand",CreateDateTime=DateTime.Parse("2003-09-01")},

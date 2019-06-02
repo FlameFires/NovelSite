@@ -18,5 +18,8 @@ namespace Model
 
         [ForeignKey("Account")]
         public int User_Id { get; set; }
+
+        // 收藏时间
+        public DateTime? CollectTime { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace Model
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("")]
+        [ForeignKey("bookInfo")]
         public int? Book_Id { get; set; }
 
         // 章节标题
@@ -36,6 +36,10 @@ namespace Model
         // 创立时间
         public DateTime CreateDataTime{get;set;}
 
+        // 阅读量
+        public int ReadNum { get; set; }
+
+        public BookInfo bookInfo { get; set; }
         
     }
 }

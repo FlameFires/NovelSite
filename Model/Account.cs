@@ -12,6 +12,7 @@ namespace Model
         public Account()
         {
             CreateDateTime = DateTime.Now;
+            IsAdmin = false;
         }
 
         [Key]

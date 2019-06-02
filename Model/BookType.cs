@@ -17,8 +17,13 @@ namespace Model
         [Required]
         public int Id { get; set; }
 
+        // 类型名
         public string Name { get; set; }
 
+        // 首页是否显示
         public bool IsHeadShow { get; set; }
+
+        // 父级ID
+        public int ParentId { get; set; }
     }
 }
