@@ -15,14 +15,93 @@ namespace NovelSite.Areas.Admin.Controllers
         {
             _dbCotext = dbContext;
         }
-
-        public IActionResult Index()
+        #region 主页
+        public ActionResult Index()
         {
-            int n = 10;
-            long s = fun(n);
-
-            return Content(n + "!阶乘（递归）：" + s + " ------- " + n + "!阶乘（for循环）： " + FactorialRecursion(n) + " ------- " + RecUrsive(5));
+            return View();
         }
+        #endregion
+
+        #region 首页
+        public ActionResult Home()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 图书管理
+        public ActionResult BookList()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 添加图书
+        public ActionResult BookAdd()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 用户管理
+        public ActionResult UserManage()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 添加用户
+        public ActionResult UserAdd()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 图片管理
+        public ActionResult ImageManage()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 网站管理
+        public ActionResult WebManage()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 友情链接列表
+        public ActionResult LinkList()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 类型列表
+        public ActionResult TypeList()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 标签列表
+        public ActionResult TagList()
+        {
+            return View();
+        }
+        #endregion
+
+
+        #region 递归算法
+        //public IActionResult Index()
+        //{
+        //    int n = 10;
+        //    long s = fun(n);
+
+        //    return Content(n + "!阶乘（递归）：" + s + " ------- " + n + "!阶乘（for循环）： " + FactorialRecursion(n) + " ------- " + RecUrsive(5));
+        //}
+        #endregion
 
         #region 阶乘
 

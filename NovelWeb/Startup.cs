@@ -71,14 +71,14 @@ namespace NovelWeb
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    name: "areas",
+                    template: "{area=Admin}/{controller=Back}/{action=Index}/{id?}");
             });
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "areas",
-                    template: "{area=Admin}/{controller=Back}/{action=Index}/{id?}");
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
