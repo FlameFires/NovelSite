@@ -13,11 +13,11 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="wwwroot\BookImgs\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\Assets\CSS\layui.css" />
+    <None Include="wwwroot\Assets\CSS\layui.mobile.css" />
     <None Include="wwwroot\Assets\CSS\modules\code.css" />
     <None Include="wwwroot\Assets\CSS\modules\laydate\default\laydate.css" />
     <None Include="wwwroot\Assets\CSS\modules\layer\default\icon-ext.png" />
@@ -140,5 +140,7 @@
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

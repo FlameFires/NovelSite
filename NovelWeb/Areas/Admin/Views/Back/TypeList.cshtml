@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>类型列表</title>
+    <script src="~/Content/Jquery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="~/Assets/CSS/layui.css" />
+    <script src="~/Assets/JS/layui.js"></script>
+</head>
+<body>
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+        <legend>类型列表</legend>
+    </fieldset>
+    <div class="layui-form" style="margin:2%;">
+        <div class="layui-inline">
+            <input type="tel" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input" placeholder="父级类型">
+        </div>
+        <button class="layui-btn">添加</button>
+    </div>
+    <div id="test9" class="demo-tree demo-tree-box" style="width: 250px; height: 480px; margin:2%;overflow: scroll;"></div>
+
+</body>
+</html>
+<script>
+    layui.use('tree', function () {
+        var tree = layui.tree
+            , layer = layui.layer
+
+        //增加/删除/修改
+        tree.render({
+            elem: '#test9'
+            , data: [{
+                label: '优秀'
+                , children: [{
+                    label: '80 ~ 90'
+                }, {
+                    label: '90 ~ 100'
+                }]
+            }, {
+                label: '良好'
+                , children: [{
+                    label: '70 ~ 80'
+                }, {
+                    label: '60 ~ 70'
+                }]
+            }, {
+                label: '要努力奥'
+                , children: [{
+                    label: '0 ~ 60'
+                }]
+            }]
+            , renderContent: true
+        });
+    });
+</script>

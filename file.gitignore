@@ -1,6 +1,8 @@
 # Generated files
 bin/
 obj/
+NovelWeb/bin/
+NovelWeb/obj/
 .vs/
 
 # Log Files
