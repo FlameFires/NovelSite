@@ -1,0 +1,311 @@
+﻿
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Chapter";
+    ViewData["Content"] = "最新热门最新小说大全,好看的最新小说推荐";
+}
+
+@section Header{
+    <style>
+        .book-info .guess ol li:hover, .book-info .guess ul li p em, .book-info .tags a, .book-list h2, .book-list ul li .intro a, .book-list ul li .update a, .bookshelf-list ul li .update a, .box1 .category li a:hover, .box2 .top-news li h4 a, .box3 .carousel-nav li .info span.type, .box3 .hot-book .more a, .box3 .rec-list ul li .info em, .box3 .rec-list ul li .intro a, .header .bookcase .iconfont, .header .bookcase a:hover, .header .search .search-btn, .news-info .book dd .update a, .news-info .cover .read a, .news-info .porn li a, .news-list ul li .text a, .search-list ul li .intro a, .search-list ul li .update a, .top-list > ul > li .intro a, .top-list > ul > li .update a, a:hover, .book-base .btns a, .show-more button, .search-list .result span, .search-list .result em, .book-info .review .more a:hover, .header .bookcase a, .bookshelf-list ul li .read a, .bookshelf-list ul li .del:hover {
+            color: #00a9c9
+        }
+
+        .book-info .attentions h3::before, .book-info .chapters h3::before, .book-info .guess h3::before, .book-info .reading-content h3::before, .book-info .review h3::before, .book-list ul li .view, .book-nav ul li.on a, .box1 .banner-nav li.selected, .box3 .carousel-nav li .view, .box4 .new-book ol li.on, .chapter-header, .news-info .book dd .view, .pages a:hover, .pages b, .pages span.current, .top-nav ul li.on a, .book-base .btns .read-online a, .bookshelf-list ul li .pic i {
+            background: #00a9c9
+        }
+
+        .show-more button:after, .show-more button:before {
+            border-left: 2px solid #00a9c9;
+            border-bottom: 2px solid #00a9c9
+        }
+
+        .footer {
+            border-top: 2px solid #00a9c9
+        }
+
+        .pages b, .book-info .review .more a:hover, .pages a:hover, .bookshelf-list ul li .read a {
+            border: 1px solid #00a9c9
+        }
+
+        .box1 .banner-nav li.selected:after {
+            border-right: 10px solid #00a9c9
+        }
+
+        .news-info .content h3 {
+            border-left: 3px solid #00a9c9
+        }
+
+        .book-info .guess ul li p em, .box1 .category li a:hover, .box3 .carousel-nav li .info span.type, .box3 .rec-list ul li .info em, .footer, .header .search .search-btn, .header .search .search-key, .news-info .content h3, .pages a:hover, .pages b, .book-base .btns .read-online a, .book-base .btns a, .pages span.current {
+            border-color: #00a9c9
+        }
+
+        .book-info .base dd .btns li.read-online a:hover, .book-info .guess ol li.on {
+            border: 1px solid #0297b3;
+        }
+
+        .book-list ul li .view:hover, .book-info .base dd .btns li.read-online a:hover, .news-info .book dd .view:hover, .book-info .guess ol li.on {
+            background: #0297b3;
+        }
+
+        .book-info .tags a:hover {
+            color: #0297b3;
+        }
+    </style>
+}
+
+<!--new header-->
+<div class="header">
+    <div class="inner">
+        <div class="tophead">
+            <!-- logo -->
+            <div class="logo lf"><a href="/" title="二筒阅读网"><img src="https://www.ertongtuku.com/statics/novel/images/logo.png"></a></div>
+            <!-- 搜索 -->
+            <div class="search lf">
+                <form method="post" name="search" action="/index.php?g=Search" target="_blank">
+                    <input type="text" name="q" id="q" placeholder="请输入书名/作者/标签" autocomplete="off" value="" class="search-key">
+                    <button type="submit" class="search-btn" id="search-btn">
+                        <i class="iconfont"></i>
+                    </button>
+                    <input type="hidden" name="modelid" value="14">
+                </form>
+            </div>
+            <!-- 书架 -->
+            <div class="bookcase rf"><a href="javascript:;"><i class="iconfont"></i>我的书架</a></div>
+        </div>
+    </div>
+    <div class="inner">
+        <div class="topnav">
+            <ul>
+                <li class="home on"><a href="/" title="首页">首页</a></li>
+                <li><a href="/yuedu/nansheng/">男生频道</a></li>
+                <li><a href="/yuedu/nvsheng/">女生频道</a></li>
+                <li><a href="/yuedu/chapter/">最新小说</a></li>
+                <li>
+                    <a href="/yuedu/xiandai/" title="现代言情">现代言情</a>
+                </li>
+                <li>
+                    <a href="/yuedu/gudai/" title="古代言情">古代言情</a>
+                </li>
+                <li>
+                    <a href="/yuedu/duanpian/" title="短篇言情">短篇言情</a>
+                </li>
+                <li>
+                    <a href="/yuedu/zongcai/" title="豪门总裁">豪门总裁</a>
+                </li>
+                <li>
+                    <a href="/yuedu/chuanyue/" title="穿越架空">穿越架空</a>
+                </li>
+                <li>
+                    <a href="/yuedu/tongren/" title="同人小说">同人小说</a>
+                </li>
+                <li>
+                    <a href="/yuedu/qingchun/" title="青春校园">青春校园</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--/new header-->
+<!--container-->
+<div class="container clearfix">
+    <div class="bread">
+        <span>您的位置 : </span>
+        <a href="/" title="二筒阅读网">首页</a>  &gt;
+        <a href="/yuedu/chapter/">最新小说</a> &gt;
+    </div>
+    <div class="wrap clearfix">
+        <!--primary-->
+        <div class="news-list">
+            <h2>共<em>130759</em>篇文章</h2>
+            <ul>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130780.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_qrhhkktxesm.jpg" alt="财迷by佚名 苏灿唐宝丽小说全文阅读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130780.html" title="财迷by佚名 苏灿唐宝丽小说全文阅读" target="_blank">财迷by佚名 苏灿唐宝丽小说全文阅读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">主人公叫苏灿唐宝丽的小说叫《财迷》，是作者佚名倾心创作的一本都市言情小说，内容主要讲述：陈国彩正在那打电话，语气陪着小心。“宋老板啊我跟你说，我这公司大有可为，只不过我想转个行业，毕竟做这太辛苦。像您这种能吃苦耐劳的人，要是接了我公司，不出一两年肯定大赚……钱对你来说也没多少，看......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130779.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_qrhhkktxesm.jpg" alt="财迷苏灿唐宝丽by佚名在线阅读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130779.html" title="财迷苏灿唐宝丽by佚名在线阅读" target="_blank">财迷苏灿唐宝丽by佚名在线阅读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">主人公叫苏灿唐宝丽的书名叫《财迷》，这本小说的作者是佚名最新写的一本都市言情类型的小说，书中主要讲述了：我是个送快递的，没仔细想过要怎么发财，只想着能赚到养活家人和女友唐宝丽的钱就行。但我想不到，一日之间，命运会把我推到两个极端。那天早上，我七点多就起来刷牙洗脸做早餐。在小厨房煮了一锅蛋花粥，进......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130778.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_r0jru2iycap.jpg" alt="爱你十分泪九分楚渊徐若思全本大结局阅读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130778.html" title="爱你十分泪九分楚渊徐若思全本大结局阅读" target="_blank">爱你十分泪九分楚渊徐若思全本大结局阅读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">《爱你十分泪九分》是由作者知否创作的古代言情类小说，人物真实生动，情节描写细腻，快来阅读吧。《爱你十分泪九分》精彩节选：“我……”徐若思不傻，很快明白过来，“你是觉得，是我害的佳怡？”“人证物证俱在，你还想狡辩！”楚渊看着这样子的徐若思，一股子无名火。蹭蹭蹭往上冒。尤其是在林珑那边并未得到满足。将徐若思拉了起来，将人丢......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130777.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_a3hcb3igkrk.jpg" alt="情深无觅处徐若思楚渊徐若思by知否全文免费阅读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130777.html" title="情深无觅处徐若思楚渊徐若思by知否全文免费阅读" target="_blank">情深无觅处徐若思楚渊徐若思by知否全文免费阅读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">主人公叫楚渊徐若思的书名叫《情深无觅处徐若思》，是作者知否倾心创作的一本古代言情类小说，文中的爱情故事凄美而纯洁，文笔极佳，实力推荐。小说精彩段落试读：“来，把这碗药喝下去！”看着楚渊递过来的碗，徐若思身子忍不住一抖。拉着他的袖子，“王爷，能不能不要喝？”“如今咱们还不能有孩子，你想，如果咱们在太子之前有孩子，皇后对觉得我有异心，我如今处境本就尴尬，......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130776.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_a3hcb3igkrk.jpg" alt="《情深无觅处徐若思》完结版精彩试读 《情深无觅处徐若思》最新章节列表"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130776.html" title="《情深无觅处徐若思》完结版精彩试读 《情深无觅处徐若思》最新章节列表" target="_blank">《情深无觅处徐若思》完结版精彩试读 《情深无觅处徐若思》最新章节列表</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">独家小说《情深无觅处徐若思》由知否倾心创作的一本古代言情风格的小说，主角楚渊徐若思，内容主要讲述：这一次不知道是楚渊忘记了，还是下面的人忘记了，没有人给徐若思戴上脚镣。她躺在床上，却有种说不出的慌乱之感。胸口很闷，也燥热的难受。“来人，来人！”无一个人过来。徐若思慢慢的起身，走路脚都是虚浮的。她有......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130775.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_gnewrydw1d1.jpg" alt="蜜爱1v1：席少，轻点宠小说 蜜爱1v1：席少，轻点宠顾向席秦暖在线阅读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130775.html" title="蜜爱1v1：席少，轻点宠小说 蜜爱1v1：席少，轻点宠顾向席秦暖在线阅读" target="_blank">蜜爱1v1：席少，轻点宠小说 蜜爱1v1：席少，轻点宠顾向席秦暖在线阅读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">主角是顾向席秦暖的小说叫做《蜜爱1v1：席少，轻点宠》，是作者陈慢慢倾心创作的一本豪门总裁类小说，文中的爱情故事凄美而纯洁，文笔极佳，实力推荐。小说精彩段落试读：房间里，灯光幽暗。女孩儿睁着盈盈的双眼，细长浓密的睫毛微微颤着，双唇娇艳如玫瑰花般绽放开来。男人看的痴迷，忍不住伸手去触碰女孩儿的脸庞，只是他的指尖，不过在她脸上停留两秒钟，女孩儿的双眼，突然凝聚满水......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130774.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_o3fzbti1seu.jpg" alt="主角是苏睛莫言的小说 《我的深情，你不配》 全文免费阅读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130774.html" title="主角是苏睛莫言的小说 《我的深情，你不配》 全文免费阅读" target="_blank">主角是苏睛莫言的小说 《我的深情，你不配》 全文免费阅读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">主角是苏睛莫言的小说叫《我的深情，你不配》，它的作者是大胡子老黄创作的豪门虐情类小说，内容主要讲述：我并没有友好到可以假装和平地去跟一个贱人握手。我拉开椅子坐下，开门见山道：“说吧，你找我什么事？”她脸色有些僵硬，收回手也坐下了：“找你能有什么事，自然是管与陆谨言的事，听说你不肯离婚。”我没忍住，嗤......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130773.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_o3fzbti1seu.jpg" alt="苏睛莫言by大胡子老黄 我的深情，你不配在线阅读全文"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130773.html" title="苏睛莫言by大胡子老黄 我的深情，你不配在线阅读全文" target="_blank">苏睛莫言by大胡子老黄 我的深情，你不配在线阅读全文</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">主角是苏睛莫言的小说叫做《我的深情，你不配》，本小说的作者是大胡子老黄倾心创作的一本豪门虐情类小说，文中的爱情故事凄美而纯洁，文笔极佳，实力推荐。小说精彩段落试读：我整个人都跟电脑死机了似的，无法思考，只有一片空白。许久，听到他说：“我不想再这么继续下去了，你好好考虑下吧，该给的，我都会给你，我们好聚好散。”随即，他挂了电脑，而我持续发呆。直到诺诺睡醒后，哭声从......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130772.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_x3rgmwdxccz.jpg" alt="如若此生未相恋七月狐 如若此生未相恋在线阅读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130772.html" title="如若此生未相恋七月狐 如若此生未相恋在线阅读" target="_blank">如若此生未相恋七月狐 如若此生未相恋在线阅读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">经典小说《如若此生未相恋》是七月狐最新写的一本现代言情类型的小说，本小说的主角林艾傅以陌，文中的爱情故事凄美而纯洁，文笔极佳，实力推荐。小说精彩段落试读：现在，男人的眼睛更漂亮了，即便气势有些凌人，但是攻势依旧不减当年，怕是任何女人都不忍心看到这样一位有财有貌又有才的男子为难吧？“傅先生，没什么事的话，恕不奉陪了。”林艾不愿再看他为难的模样，也不想再因......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130771.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_x3rgmwdxccz.jpg" alt="《如若此生未相恋》小说完结版精彩试读 林艾傅以陌小说全文"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130771.html" title="《如若此生未相恋》小说完结版精彩试读 林艾傅以陌小说全文" target="_blank">《如若此生未相恋》小说完结版精彩试读 林艾傅以陌小说全文</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">主人公叫林艾傅以陌的小说是《如若此生未相恋》，它的作者是七月狐创作的现代言情风格的小说，文中的爱情故事凄美而纯洁，文笔极佳，实力推荐。小说精彩段落试读：说着，傅以陌墨色的眸子扫了眼房顶上的摄像头，冷冷的瞥了眼满头大汗的中年妇女，嘴角上扬起一个令人心惊胆战的弧度：“顺便再报个警，贪人财物那是偷，污蔑别人，那是诽谤，无论哪件都足以在局里呆上几天了。”“咱......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130770.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_x3rgmwdxccz.jpg" alt="《如若此生未相恋》林艾傅以陌小说在线阅读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130770.html" title="《如若此生未相恋》林艾傅以陌小说在线阅读" target="_blank">《如若此生未相恋》林艾傅以陌小说在线阅读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">有很多书友在找一本叫《如若此生未相恋》的小说，是作者七月狐倾心创作的一本现代言情小说，下面小编为大家带来的是这本世间有你深爱无尽小说的免费阅读章节内容，想要看这本小说的网友不要错过哦。林艾七年前那场荒唐的恋爱故事其实很简单，像所有校园爱情故事一样，年轻的女孩爱上了努力帅气的男孩，只是不同的是，男孩不是言|情小说里的高富帅，而是一个一穷二白连大学学费都交不起的穷小子。林艾主动将自己的......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130769.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_x3rgmwdxccz.jpg" alt="如若此生未相恋by七月狐 林艾傅以陌小说完整篇在线阅读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130769.html" title="如若此生未相恋by七月狐 林艾傅以陌小说完整篇在线阅读" target="_blank">如若此生未相恋by七月狐 林艾傅以陌小说完整篇在线阅读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">完整版小说《如若此生未相恋》由七月狐所编写的现代言情类型的小说，本小说的主角林艾傅以陌，情节引人入胜，非常推荐。主要讲的是：屋檐外的雨已经慢慢变大了，再不是林艾刚刚出来时那般的毛毛细雨了，望着阴沉的天空，林艾一时之间有些恍惚：现在，几点了呢？她在超市做收银员，晚上六点是要去换班将下午的小姑娘换下的，可是现在这灰蒙蒙的天空，......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130768.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_x3rgmwdxccz.jpg" alt="《如若此生未相恋》林艾傅以陌章节精彩试读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130768.html" title="《如若此生未相恋》林艾傅以陌章节精彩试读" target="_blank">《如若此生未相恋》林艾傅以陌章节精彩试读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">独家完整版小说《如若此生未相恋》是七月狐最新写的一本现代言情类型的小说，主角林艾傅以陌，情节引人入胜，非常推荐。主要讲的是：其实，林艾的母亲对他并不好，不，应该说是很不好，当年，当这位略带强势的中年妇女知道自己在和她的宝贝女儿交往的时候，直接一巴掌扇到了他的脸上，喝令他不许再见林艾。她像所有宠爱自己孩子的小市民一样，指望着......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130767.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_334fzaxycxx.jpg" alt="爱你，余生足矣by梧栖 温瑶萧南城小说全文阅读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130767.html" title="爱你，余生足矣by梧栖 温瑶萧南城小说全文阅读" target="_blank">爱你，余生足矣by梧栖 温瑶萧南城小说全文阅读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">经典小说《爱你，余生足矣》由梧栖所编写的现代言情类小说，这本小说的主角是温瑶萧南城，文中的爱情故事凄美而纯洁，文笔极佳，实力推荐。小说精彩段落试读：凌晨两点，贫民区。“求你……放过他们……”虚弱无力的请求声几乎被电闪雷鸣掩盖，她一遍又一遍的重复着，像是被抽去了灵魂的木偶。“求求你……”“萧家的声誉，绝不允许被摧毁。”不容抗拒的嗓音极具有穿透力，眼......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130766.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_334fzaxycxx.jpg" alt="《爱你，余生足矣》温瑶萧南城全文免费试读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130766.html" title="《爱你，余生足矣》温瑶萧南城全文免费试读" target="_blank">《爱你，余生足矣》温瑶萧南城全文免费试读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">主角叫温瑶萧南城的书名叫《爱你，余生足矣》，是作者梧栖最新写的一本现代言情类小说，情节引人入胜，非常推荐。主要讲的是：温瑶换到了大厅外的长廊，她大腿上的伤口一直在流血，弄得一路上都是星星点点的血迹，无可奈何之下她只能用手捂住伤口，跪在地上沿着血迹一点点擦干净。不知过了多久，估计快凌晨了，长廊上的灯都灭了一半，温瑶终于......</p>
+                </li>
+                <li>
+                    <a class="pic" href="/yuedu/chapter/130765.html" target="_blank"><img class="lazy" src="~/images/thumb_100_130_334fzaxycxx.jpg" alt="温瑶萧南城小说 《爱你，余生足矣》小说全文精彩试读"></a>
+                    <h5 class="tit"><a href="/yuedu/chapter/130765.html" title="温瑶萧南城小说 《爱你，余生足矣》小说全文精彩试读" target="_blank">温瑶萧南城小说 《爱你，余生足矣》小说全文精彩试读</a></h5>
+                    <p class="info"><span>发布时间：<em>2019-06-01</em></span></p>
+                    <p class="text">火爆新书《爱你，余生足矣》是梧栖所编写的现代言情类型的小说，这本小说的主角是温瑶萧南城，文中的爱情故事凄美而纯洁，文笔极佳，实力推荐。小说精彩段落试读：萧南城视线落在温瑶的身上，面目严峻，就这么短暂的一瞬间，他心中泛起的波澜足够淹没整个心脏，无边的心痛奔涌而来，挡都挡不住。尤其是在听到温瑶说他们以后像是平行的两条线，再也不会有交集后，更是让心脏猛地一......</p>
+                </li>
+            </ul>
+
+        </div>
+        <!--/primary-->
+        <!--side-->
+        <div class="side-bar">
+            <!--hot-news-->
+            <div class="hot-news">
+                <h3>热门资讯</h3>
+                <ul>
+                    <li class="s1"><em>1</em><a href="/yuedu/chapter/2339.html" target="_blank">完整版《宠爱无限：总裁的爱妻萌宝》苏洛洛龙夜爵全文免费阅读</a></li>
+                    <li class="s2"><em>2</em><a href="/yuedu/chapter/48138.html" target="_blank">《罪爱》小说章节列表在线阅读 第1章：晚饭后</a></li>
+                    <li class="s3"><em>3</em><a href="/yuedu/chapter/2340.html" target="_blank">宠爱无限：总裁的爱妻萌宝全文免费阅读 苏洛洛龙夜爵小说大结局无弹窗</a></li>
+                    <li class="s4"><em>4</em><a href="/yuedu/chapter/1032.html" target="_blank">最强医圣林奇小说完整篇在线阅读</a></li>
+                    <li class="s5"><em>5</em><a href="/yuedu/chapter/1033.html" target="_blank">林奇小说《最强医圣》全文及大结局精彩试读</a></li>
+                    <li class="s6"><em>6</em><a href="/yuedu/chapter/78311.html" target="_blank">重生娇妻求离婚海小棠东方裕by妃子一笑全文免费阅读</a></li>
+                    <li class="s7"><em>7</em><a href="/yuedu/chapter/2785.html" target="_blank">亿万爹地宠不停(苏洛洛龙夜爵)全文完结在线阅读完整版</a></li>
+                    <li class="s8"><em>8</em><a href="/yuedu/chapter/2341.html" target="_blank">宠爱无限：总裁的爱妻萌宝完整版全文阅读 苏洛洛龙夜爵小说 大结局</a></li>
+                    <li class="s9"><em>9</em><a href="/yuedu/chapter/10970.html" target="_blank">优质新书《逆天废柴》林君河小说在线阅读 第1章 仙尊重生</a></li>
+                    <li class="s10"><em>10</em><a href="/yuedu/chapter/59220.html" target="_blank">小说《得说爱时必说爱》周夜白秦薇全文免费阅读</a></li>
+                </ul>
+            </div>
+            <!--hot-tags-->
+            <div class="hot-tags">
+                <h3>热门专题</h3>
+                <ul>
+                    <li><a href="/yuedu/zt/25.html" target="_blank"><img src="~/images/thumb_260_117_5b162736df28e.png" alt="总裁"><span>总裁</span></a></li>
+                    <li><a href="/yuedu/zt/24.html" target="_blank"><img src="~/images/thumb_260_117_5b16271a6c29c.png" alt="豪门"><span>豪门</span></a></li>
+                    <li><a href="/yuedu/zt/23.html" target="_blank"><img src="~/images/thumb_260_117_5ae0374927643.png" alt="现代"><span>现代</span></a></li>
+                </ul>
+            </div>
+            <!--new-book-->
+            <div class="new-book">
+                <h3>推荐小说</h3>
+                <ul>
+                    <li>
+                        <a class="pic" href="/yuedu/xiaoshuo/45295.html" target="_blank"><img class="lazy" src="~/images/thumb_50_75_4y5c4wr141a.jpg" alt="云少，有妖妻"></a>
+                        <h5><a href="/yuedu/xiaoshuo/45295.html" target="_blank">云少，有妖妻</a></h5>
+                        <p>作者：温若离</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="/yuedu/xiaoshuo/45198.html" target="_blank"><img class="lazy" src="~/images/thumb_50_75_4sypzx2fzll.jpg" alt="拆房补婚，总裁请淡定"></a>
+                        <h5><a href="/yuedu/xiaoshuo/45198.html" target="_blank">拆房补婚，总裁请淡定</a></h5>
+                        <p>作者：月光</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="/yuedu/xiaoshuo/45160.html" target="_blank"><img class="lazy" src="~/images/thumb_50_75_nufw0sitisf.jpg" alt="嗜宠成婚：惹火娇妻送上门"></a>
+                        <h5><a href="/yuedu/xiaoshuo/45160.html" target="_blank">嗜宠成婚：惹火娇妻送上门</a></h5>
+                        <p>作者：木清影</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="/yuedu/xiaoshuo/45121.html" target="_blank"><img class="lazy" src="~/images/thumb_50_75_nm0dza10szk.jpg" alt="失婚妻子的逆袭"></a>
+                        <h5><a href="/yuedu/xiaoshuo/45121.html" target="_blank">失婚妻子的逆袭</a></h5>
+                        <p>作者：云姜公主</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="/yuedu/xiaoshuo/44964.html" target="_blank"><img class="lazy" src="~/images/thumb_50_75_gl54echscuq.jpg" alt="重生娇妻：古少一宠成瘾"></a>
+                        <h5><a href="/yuedu/xiaoshuo/44964.html" target="_blank">重生娇妻：古少一宠成瘾</a></h5>
+                        <p>作者：清风风</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/side-->
+    </div>
+</div>
+<!--/container-->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ee895bd9613f8d26917ff438e7904477";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+

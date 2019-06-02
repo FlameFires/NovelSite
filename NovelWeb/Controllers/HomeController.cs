@@ -15,6 +15,31 @@ namespace NovelWeb.Controllers
             return View();
         }
 
+        // 最新资讯页
+        public IActionResult Chapter()
+        {
+            return View();
+        }
+
+        // 书籍详情页
+        public IActionResult Book()
+        {
+            return View();
+        }
+
+        // 类型页
+        public IActionResult Genre()
+        {
+            return View();
+        }
+
+        // 咨询页
+        public IActionResult Advisory()
+        {
+            return View();
+        }
+
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -39,5 +64,7 @@ namespace NovelWeb.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        
     }
 }

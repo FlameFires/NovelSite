@@ -1,0 +1,246 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Genre";
+    ViewData["Content"] = "最新热门最新小说大全,好看的最新小说推荐";
+}
+
+<!--new header-->
+<div class="header">
+    <div class="inner">
+        <div class="tophead">
+            <!-- logo -->
+            <div class="logo lf"><a href="https://www.ertongtuku.com/" title="二筒阅读网"><img src="~/images/logo.png"></a></div>
+            <!-- 搜索 -->
+            <div class="search lf">
+                <form method="post" name="search" action="https://www.ertongtuku.com/index.php?g=Search" target="_blank">
+                    <input type="text" name="q" id="q" placeholder="请输入书名/作者/标签" autocomplete="off" value="" class="search-key">
+                    <button type="submit" class="search-btn" id="search-btn">
+                        <i class="iconfont"></i>
+                    </button>
+                    <input type="hidden" name="modelid" value="14">
+                </form>
+            </div>
+            <!-- 书架 -->
+            <div class="bookcase rf"><a href="javascript:;"><i class="iconfont"></i>我的书架</a></div>
+        </div>
+    </div>
+    <div class="inner">
+        <div class="topnav">
+            <ul>
+                <li class="home on"><a href="https://www.ertongtuku.com/" title="首页">首页</a></li>
+                <li><a href="https://www.ertongtuku.com/yuedu/nansheng/">男生频道</a></li>
+                <li><a href="https://www.ertongtuku.com/yuedu/nvsheng/">女生频道</a></li>
+                <li><a href="https://www.ertongtuku.com/yuedu/chapter/">最新小说</a></li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/xiandai/" title="现代言情">现代言情</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/gudai/" title="古代言情">古代言情</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/duanpian/" title="短篇言情">短篇言情</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/zongcai/" title="豪门总裁">豪门总裁</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/chuanyue/" title="穿越架空">穿越架空</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/tongren/" title="同人小说">同人小说</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/qingchun/" title="青春校园">青春校园</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--/new header-->
+<!--container-->
+<div class="container clearfix">
+    <div class="bread">
+        <span>您的位置 : </span>
+        <a href="https://www.ertongtuku.com/" title="二筒阅读网">首页</a>  &gt;
+        <a href="https://www.ertongtuku.com/yuedu/nvsheng/">女生</a> &gt; <a href="https://www.ertongtuku.com/yuedu/duanpian/">短篇言情</a> &gt;
+    </div>
+    <div class="wrap clearfix">
+        <!--main-->
+        <div class="book-nav">
+            <div class="clearfix">
+                <p>男生频道：</p>
+                <ul class="clearfix">
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/nansheng/" title="短篇言情">全部</a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/dushi/" title="都市生活  ">都市生活  <span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/xuanhuan/" title="玄幻科幻">玄幻科幻<span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/chongsheng/" title="穿越重生">穿越重生<span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/wuxia/" title="武侠仙侠  ">武侠仙侠  <span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/xuanyi/" title="悬疑灵异">悬疑灵异<span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/guanchang/" title="官场职场">官场职场<span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/lishi/" title="历史军事">历史军事<span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/youxi/" title="游戏竞技">游戏竞技<span></span></a></li>
+                </ul>
+            </div>
+            <div class="clearfix">
+                <p>女生频道：</p>
+                <ul class="clearfix">
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/nvsheng/" title="短篇言情">全部</a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/xiandai/" title="现代言情">现代言情<span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/gudai/" title="古代言情">古代言情<span></span></a></li>
+                    <li class="on"><a href="https://www.ertongtuku.com/yuedu/duanpian/" title="短篇言情">短篇言情<span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/zongcai/" title="豪门总裁">豪门总裁<span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/chuanyue/" title="穿越架空">穿越架空<span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/tongren/" title="同人小说">同人小说<span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/qingchun/" title="青春校园">青春校园<span></span></a></li>
+                    <li class=""><a href="https://www.ertongtuku.com/yuedu/xianxia/" title="仙侠奇缘">仙侠奇缘<span></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="book-list">
+            <h2>全部短篇言情小说</h2>
+            <ul class="clearfix">
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45332.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_x5qolsqkzjv.jpg" alt="军少，您老婆拆家了！"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45332.html" target="_blank">军少，您老婆拆家了！</a></h5>
+                    <p class="info"><span>作者：木宝儿</span><span>分类：短篇言情</span></p>
+                    <p class="intro">主角叫叶清欢邵允琛的书名叫《军少，您老婆拆家了！》，这本小说的作者是木宝儿创作的现代言情小说，情节引...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45332.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45322.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_dcr3scjzafp.jpg" alt="为了欢乐还是爱情"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45322.html" target="_blank">为了欢乐还是爱情</a></h5>
+                    <p class="info"><span>作者：郎继雯</span><span>分类：短篇言情</span></p>
+                    <p class="intro">小说主人公是蓝雅雯林毅的书名叫《为了欢乐还是爱情》，这本小说的作者是郎继雯最新写的一本现代言情类型的...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45322.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45318.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_4qj3chthmbg.jpg" alt="豪门私宠：总裁竹马求放过"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45318.html" target="_blank">豪门私宠：总裁竹马求放过</a></h5>
+                    <p class="info"><span>作者：往昔</span><span>分类：短篇言情</span></p>
+                    <p class="intro">经典小说《豪门私宠：总裁竹马求放过》由往昔最新写的一本现代言情类小说，本小说的主角欧阳泽凌澄，书中主...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45318.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45220.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_zruv0evglb0.jpg" alt="终爱成殇"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45220.html" target="_blank">终爱成殇</a></h5>
+                    <p class="info"><span>作者：江沫希</span><span>分类：短篇言情</span></p>
+                    <p class="intro">主角是祈如影贺祟行的书名叫《终爱成殇》，本小说的作者是江沫希所编写的短篇小说类型的小说，内容主要讲述...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45220.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45215.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_pcmwaw0lczz.jpg" alt="白枭翎"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45215.html" target="_blank">白枭翎</a></h5>
+                    <p class="info"><span>作者：徐景</span><span>分类：短篇言情</span></p>
+                    <p class="intro">《白枭翎》是由作者徐景所著的一本短篇小说类小说，人物真实生动，情节描写细腻，快来阅读吧。《白枭翎》精...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45215.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45149.html" target="_blank"><img class="lazy" src="~/images/xht3tgmpk2r.jpg" alt="爱在阳光正南方"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45149.html" target="_blank">爱在阳光正南方</a></h5>
+                    <p class="info"><span>作者：春小风</span><span>分类：短篇言情</span></p>
+                    <p class="intro">主角是宋清雨傅正清的小说叫做《爱在阳光正南方》，这本小说的作者是春小风倾心创作的一本婚恋生活类型的小...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45149.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45143.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_gn1kstgqtg2.jpg" alt="狐王来袭:盛宠独家冷妻"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45143.html" target="_blank">狐王来袭:盛宠独家冷妻</a></h5>
+                    <p class="info"><span>作者：雾钥儿</span><span>分类：短篇言情</span></p>
+                    <p class="intro">完整版小说《狐王来袭:盛宠独家冷妻》由雾钥儿倾心创作的一本短篇小说风格的小说，故事中的主角是秋梓言白潇...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45143.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45107.html" target="_blank"><img class="lazy" src="~/images/ok4v3xnzvdj.jpg" alt="初婚微苦：爹地追妻不吃香"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45107.html" target="_blank">初婚微苦：爹地追妻不吃香</a></h5>
+                    <p class="info"><span>作者：泡芙</span><span>分类：短篇言情</span></p>
+                    <p class="intro">独家完整版小说《初婚微苦：爹地追妻不吃香》是泡芙倾心创作的一本婚恋生活类型的小说，主角沈意如穆斯年，...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45107.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45101.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_ukbxe3thaka.jpg" alt="空降萌宝：总裁爹地，超强势"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45101.html" target="_blank">空降萌宝：总裁爹地，超强势</a></h5>
+                    <p class="info"><span>作者：稚念</span><span>分类：短篇言情</span></p>
+                    <p class="intro">《空降萌宝：总裁爹地，超强势》是由作者稚念创作的婚恋生活小说，情节精妙绝伦，扣人心弦，值得一看。《空...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45101.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45033.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_3sn2btcnsxi.jpg" alt="不知相思不知情"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45033.html" target="_blank">不知相思不知情</a></h5>
+                    <p class="info"><span>作者：摘星揽月</span><span>分类：短篇言情</span></p>
+                    <p class="intro">甜宠新书《不知相思不知情》由摘星揽月最新写的一本都市言情类小说，故事中的主角是沈佳曼慕远辰，情节引人...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45033.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45027.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_5cef833be3602.jpg" alt="蝮青"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45027.html" target="_blank">蝮青</a></h5>
+                    <p class="info"><span>作者：银花火树</span><span>分类：短篇言情</span></p>
+                    <p class="intro">《蝮青》小说简介《蝮青》是由作者银花火树写的一本都市言情类小说，作者文笔极佳，题材新颖，推荐阅读。《...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45027.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/44995.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_5cef707945ad4.jpg" alt="重生复仇名媛"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/44995.html" target="_blank">重生复仇名媛</a></h5>
+                    <p class="info"><span>作者：迟归归</span><span>分类：短篇言情</span></p>
+                    <p class="intro">《重生复仇名媛》小说简介完结小说《重生复仇名媛》是迟归归所编写的现代言情风格的小说，这本小说的主角是...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/44995.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/44961.html" target="_blank"><img class="lazy" src="~/images/5cef4cd49440a.jpg" alt="与你只有半生缘"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/44961.html" target="_blank">与你只有半生缘</a></h5>
+                    <p class="info"><span>作者：林沿</span><span>分类：短篇言情</span></p>
+                    <p class="intro">《与你只有半生缘》小说简介主人公叫秦少言顾珞水的书名叫《与你只有半生缘》，这本小说的作者是林沿最新写...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/44961.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/44907.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_2rscgnlum3k.jpg" alt="独家宠爱：总裁大人请小心"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/44907.html" target="_blank">独家宠爱：总裁大人请小心</a></h5>
+                    <p class="info"><span>作者：清风舞</span><span>分类：短篇言情</span></p>
+                    <p class="intro">甜宠新书《独家宠爱：总裁大人请小心》是清风舞所编写的婚恋生活类小说，主角唐悠然叶萧和，情节引人入胜，...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/44907.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/44884.html" target="_blank"><img class="lazy" src="~/images/vkjzgvs0cn5.jpg" alt="蚀骨情：贺先生，别乱来"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/44884.html" target="_blank">蚀骨情：贺先生，别乱来</a></h5>
+                    <p class="info"><span>作者：微醺</span><span>分类：短篇言情</span></p>
+                    <p class="intro">主角叫向晚贺寒川的小说叫《蚀骨情：贺先生，别乱来》，本小说的作者是微醺倾心创作的一本现代言情类小说，...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/44884.html" target="_blank">小说详情</a>
+                </li>
+                <li>
+                    <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/44827.html" target="_blank"><img class="lazy" src="~/images/thumb_200_266_zncblsodkux.jpg" alt="一吻契约，猫灵的守护者"></a>
+                    <h5 class="tit"><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/44827.html" target="_blank">一吻契约，猫灵的守护者</a></h5>
+                    <p class="info"><span>作者：露雪明明</span><span>分类：短篇言情</span></p>
+                    <p class="intro">尤奈子白灵是《一吻契约，猫灵的守护者》的主角，作者是露雪明明，小说主要的讲的是：高中女生尤奈子只因释...</p>
+                    <a class="view" href="https://www.ertongtuku.com/yuedu/xiaoshuo/44827.html" target="_blank">小说详情</a>
+                </li>
+            </ul>
+        </div>
+        <!--main-->
+    </div>
+</div>
+<!--/container-->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ee895bd9613f8d26917ff438e7904477";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+

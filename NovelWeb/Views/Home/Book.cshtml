@@ -1,0 +1,472 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Book";
+    ViewData["Content"] = "最新热门最新小说大全,好看的最新小说推荐";
+}
+
+@section Header{
+    <link href="~/css/layer.css" rel="stylesheet" />
+    <script src="~/js/jquery.js"></script>
+    <style>
+
+        .book-info .guess ol li:hover, .book-info .guess ul li p em, .book-info .tags a, .book-list h2, .book-list ul li .intro a, .book-list ul li .update a, .bookshelf-list ul li .update a, .box1 .category li a:hover, .box2 .top-news li h4 a, .box3 .carousel-nav li .info span.type, .box3 .hot-book .more a, .box3 .rec-list ul li .info em, .box3 .rec-list ul li .intro a, .header .bookcase .iconfont, .header .bookcase a:hover, .header .search .search-btn, .news-info .book dd .update a, .news-info .cover .read a, .news-info .porn li a, .news-list ul li .text a, .search-list ul li .intro a, .search-list ul li .update a, .top-list > ul > li .intro a, .top-list > ul > li .update a, a:hover, .book-base .btns a, .show-more button, .search-list .result span, .search-list .result em, .book-info .review .more a:hover, .header .bookcase a, .bookshelf-list ul li .read a, .bookshelf-list ul li .del:hover {
+            color: #00a9c9
+        }
+
+        .book-info .attentions h3::before, .book-info .chapters h3::before, .book-info .guess h3::before, .book-info .reading-content h3::before, .book-info .review h3::before, .book-list ul li .view, .book-nav ul li.on a, .box1 .banner-nav li.selected, .box3 .carousel-nav li .view, .box4 .new-book ol li.on, .chapter-header, .news-info .book dd .view, .pages a:hover, .pages b, .pages span.current, .top-nav ul li.on a, .book-base .btns .read-online a, .bookshelf-list ul li .pic i {
+            background: #00a9c9
+        }
+
+        .show-more button:after, .show-more button:before {
+            border-left: 2px solid #00a9c9;
+            border-bottom: 2px solid #00a9c9
+        }
+
+        .footer {
+            border-top: 2px solid #00a9c9
+        }
+
+        .pages b, .book-info .review .more a:hover, .pages a:hover, .bookshelf-list ul li .read a {
+            border: 1px solid #00a9c9
+        }
+
+        .box1 .banner-nav li.selected:after {
+            border-right: 10px solid #00a9c9
+        }
+
+        .news-info .content h3 {
+            border-left: 3px solid #00a9c9
+        }
+
+        .book-info .guess ul li p em, .box1 .category li a:hover, .box3 .carousel-nav li .info span.type, .box3 .rec-list ul li .info em, .footer, .header .search .search-btn, .header .search .search-key, .news-info .content h3, .pages a:hover, .pages b, .book-base .btns .read-online a, .book-base .btns a, .pages span.current {
+            border-color: #00a9c9
+        }
+
+        .book-info .base dd .btns li.read-online a:hover, .book-info .guess ol li.on {
+            border: 1px solid #0297b3;
+        }
+
+        .book-list ul li .view:hover, .book-info .base dd .btns li.read-online a:hover, .news-info .book dd .view:hover, .book-info .guess ol li.on {
+            background: #0297b3;
+        }
+
+        .book-info .tags a:hover {
+            color: #0297b3;
+        }
+    </style>
+}
+
+<!--new header-->
+<div class="header">
+    <div class="inner">
+        <div class="tophead">
+            <!-- logo -->
+            <div class="logo lf"><a href="https://www.ertongtuku.com/" title="二筒阅读网"><img src="~/images/logo.png"></a></div>
+            <!-- 搜索 -->
+            <div class="search lf">
+                <form method="post" name="search" action="https://www.ertongtuku.com/index.php?g=Search" target="_blank">
+                    <input type="text" name="q" id="q" placeholder="请输入书名/作者/标签" autocomplete="off" value="" class="search-key">
+                    <button type="submit" class="search-btn" id="search-btn">
+                        <i class="iconfont"></i>
+                    </button>
+                    <input type="hidden" name="modelid" value="14">
+                </form>
+            </div>
+            <!-- 书架 -->
+            <div class="bookcase rf"><a href="javascript:;"><i class="iconfont"></i>我的书架</a></div>
+        </div>
+    </div>
+    <div class="inner">
+        <div class="topnav">
+            <ul>
+                <li class="home on"><a href="https://www.ertongtuku.com/" title="首页">首页</a></li>
+                <li><a href="https://www.ertongtuku.com/yuedu/nansheng/">男生频道</a></li>
+                <li><a href="https://www.ertongtuku.com/yuedu/nvsheng/">女生频道</a></li>
+                <li><a href="https://www.ertongtuku.com/yuedu/chapter/">最新小说</a></li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/xiandai/" title="现代言情">现代言情</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/gudai/" title="古代言情">古代言情</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/duanpian/" title="短篇言情">短篇言情</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/zongcai/" title="豪门总裁">豪门总裁</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/chuanyue/" title="穿越架空">穿越架空</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/tongren/" title="同人小说">同人小说</a>
+                </li>
+                <li>
+                    <a href="https://www.ertongtuku.com/yuedu/qingchun/" title="青春校园">青春校园</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--/new header-->
+<!--container-->
+<div class="container clearfix">
+    <div class="bread">
+        <span>您的位置 : </span>
+        <a href="https://www.ertongtuku.com/" title="二筒阅读网">二筒阅读网</a>
+        &gt; <a href="https://www.ertongtuku.com/yuedu/nvsheng/">女生</a> &gt; <a href="https://www.ertongtuku.com/yuedu/gudai/">古代言情</a> &gt;
+        情深无觅处徐若思		<p>更新时间：2019-06-01 16:15:21</p>
+    </div>
+    <div class="wrap clearfix">
+        <!--bsse-->
+        <div class="book-base clearfix">
+            <div class="book-pic lf">
+                <img src="~/images/thumb_200_266_a3hcb3igkrk.jpg" alt="情深无觅处徐若思">
+            </div>
+            <div class="book-text lf">
+                <h1 class="title">
+                    <em>情深无觅处徐若思</em>
+                    <a href="https://www.ertongtuku.com/yuedu/author/zhifou/">知否 著</a>
+                </h1>
+                <p class="tag-box clearfix">
+                    <i class="zhujue-item item">楚渊徐若思</i>
+                    <a href="https://www.ertongtuku.com/yuedu/zt/23.html" class="tag-item item" title="现代">现代</a><a href="https://www.ertongtuku.com/yuedu/zt/15.html" class="tag-item item" title="奇幻">奇幻</a><a href="https://www.ertongtuku.com/yuedu/zt/7.html" class="tag-item item" title="虐恋">虐恋</a><a href="https://www.ertongtuku.com/yuedu/zt/8.html" class="tag-item item" title="架空">架空</a>
+                </p>
+                <p class="intro">主角叫楚渊徐若思的书名叫《情深无觅处徐若思》，本小说的作者是知否所编写的古代言情风格的小说，情节引人入胜，非常推荐。主要讲的是：所谓真爱不过是一场谎言，真心换来是无情的折磨。他卑劣撕碎她的尊严和骄傲，到头来才发现一切不过是一场可笑的误会。他悔他痛，想要弥补。但来不及了...</p>
+                <ul class="btns">
+                    <li class="read-online"><a id="reading" class="reading" data-url="" href="javascript:void(0)">微信阅读</a></li>
+                    <li class="add-bookshelf" data-bookid="45383"><a>放入书架</a></li>
+                    <li class="go-review"><a>网友评论</a></li>
+                    <li class="go-mobile">
+                        <a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45383.html#">
+                            <i class="iconfont"></i>手机阅读
+                            <div class="drop-down">
+                                <cite><i></i></cite>
+                                <span id="j-qrcode"><canvas width="144" height="144"></canvas></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrap clearfix">
+        <!--primary-->
+        <div class="book-info">
+            <div class="reading-content">
+                <h3>精彩章节试读：</h3>
+                <div class="content">
+                    <p><strong>《情深无觅处徐若思》 第2章 算账 免费试读</strong></p>
+                    <p>这一巴掌极重，打的徐若思牙齿都松了，口中也有血沿着嘴角溢出。</p><p>抬眸愣愣的看着楚渊把林珑扶起来，小心翼翼的问她是否有伤着。</p><p>那温柔小意的样子，像一把利箭刺入了徐若思的眼睛，也戳进了她的心。</p><p>她的相公，在她的面前，握住别的女人的手，小心翼翼的呵护，他的一只手搂住林珑的腰，他的眼睛不忍的看着林珑的手。</p><p>仿佛他们才是一对。</p><p>那她呢，她算什么？</p><p>徐若思张张嘴，血沿着嘴角流出，她想问几句。</p><p>“王爷，表姐还在呢！”林珑娇羞低语。</p><p>“她在就在吧，以后她迟早要适应我们的相处！”楚渊低语。</p><p>连一眼都不曾施舍给徐若思。</p><p>“王爷，人家，人家害羞！”林珑说着，抬手捶了捶楚渊的胸口。却被楚渊抓住。</p><p>轻轻的咬了一口。</p><p>然后楚渊拦腰打横抱起了林珑，大步朝她的屋子走去。</p><p>她的屋子。</p><p>徐若思有种心被人凌迟的疼痛。</p><p>跌跌撞撞走过去，在门口就听到屋子里传出来的声音，那么的娇媚。</p><p>她知道那是什么声音，那是男女欢爱的声音。</p><p>他们一定是在骗她的吧。</p><p>徐若思想着，迈步走了进去。</p><p>两具赤裸的身体，交缠着，他们真的做了。</p><p>而这些日子，在这张大床上，楚渊也这样子对她。</p><p>“呵！”</p><p>“呵呵！”</p><p>徐若思悲戚一笑，泪如雨下。</p><p>更觉得腹部剧痛。</p><p>有股子温热从大腿一直流了下去。</p><p>她知道，又一个孩子没了。</p><p>没了。</p><p>这一次没有喝药，没有不甘心。</p><p>因为她压根不知道他存在，就这样子没了。</p><p>“为什么这样子对我，为什么这样子对我，我做错了什么？”徐若思哭着。</p><p>低吼着。</p><p>若是不喜欢她，为什么要在那一年，桃花盛开的时候，在挑花树下与她相见，后来的一次次相会，琴瑟和鸣，难道都是一场场骗局？</p><p>一路走，一路血。</p><p>丫鬟婆子尖叫出声，“王妃娘娘……”</p><p>“来人呐，王妃娘娘小产了！”</p><p>可是，徐若思知道，在她晕过去之前，楚渊都没有出来。</p><p>或许他觉得，他现在做的事情，比他的孩子还要重要。</p><p>如若不然，又怎么会让她连着没了五个孩子。</p><p>……</p><p>“啪！”</p><p>徐若思疼的醒了过来。</p><p>有些迷茫的看着床顶。</p><p>这不是她在王府的床，是什么地方？</p><p>“醒了！”楚渊冷冷的声音传来。</p><p>徐若思才看清楚了她。</p><p>刚刚是他打她吗？</p><p>“醒了就好，我们该好好的算算账了！”楚渊说着，见徐若思拉了起来。</p><p>徐若思身体还很虚弱，被他这么一拉扯，一下子被摔到了床下。</p><p>疼的她满头大汗，一句话都说不出来。</p><p>“说吧，当年为什么那样子对佳怡！”楚渊沉声。</p><p>看着徐若思这样子，再没了曾经的温柔。</p><p>也没有了曾经的耐心。</p><p>尤其是前朝，徐家各种施压，要他立徐若思为皇后。</p><p>这个蛇蝎毒妇，有什么资格做他的皇后。</p><p>“佳怡？”徐若思蹙眉。</p><p>佳怡不是死了吗？</p><p>被人侮辱至死，等到尸体被抬回来，她身上的伤痕，让人见了都于心不忍。</p><p>“是，佳怡，你说，为什么要那样子对她？”楚渊阴霾着脸，眸子里都是浓烈的恨意。</p>
+                </div>
+                <div class="show-more" id="show-more">
+                    <button>展开阅读全文</button>
+                </div>
+            </div>
+
+            <!--chapters-->
+            <!--guess-->
+            <div class="guess">
+                <h3>猜你喜欢</h3>
+                <ol class="clearfix">
+                    <li class="on">现代小说</li>
+                    <li>奇幻小说</li>
+                    <li>虐恋小说</li>
+                    <li>架空小说</li>
+                </ol>
+                <ul class="clearfix" style="display: block">
+                    <li class="first">
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/zt/23.html"><img src="~/images/thumb_262_118_5ae0374927643.png" alt="现代小说"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/zt/23.html" title="现代小说">现代小说</a></h5>
+                        <p>二筒文学网现代小说频道为您提供最新最热门的现代小说推荐，包括好看的现代小说完本推荐、现代小说排行榜等精彩好书。</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45383.html"><img src="~/images/thumb_72_96_a3hcb3igkrk.jpg" alt="情深无觅处徐若思"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45383.html" title="情深无觅处徐若思">情深无觅处徐若思</a></h5>
+                        <p>作者：知否</p>
+                        <p><em>古代言情</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45380.html"><img src="~/images/thumb_72_96_24g00oqthzk.jpg" alt="张子陵重回地球"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45380.html" title="张子陵重回地球">张子陵重回地球</a></h5>
+                        <p>作者：勿小悟</p>
+                        <p><em>都市生活  </em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45379.html"><img src="~/images/thumb_72_96_vv5me2ktn3t.jpg" alt="1胎2宝：总裁大人，给力宠"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45379.html" title="1胎2宝：总裁大人，给力宠">1胎2宝：总裁大人，给力宠</a></h5>
+                        <p>作者：糯米粽</p>
+                        <p><em>现代言情</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45370.html"><img src="~/images/thumb_72_96_srlrm2cygdd.jpg" alt="女鬼住隔壁"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45370.html" title="女鬼住隔壁">女鬼住隔壁</a></h5>
+                        <p>作者：鸿老九</p>
+                        <p><em>悬疑灵异</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45368.html"><img src="~/images/thumb_72_96_ppgjpjudxa0.jpg" alt="我的鬼夫太傲娇"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45368.html" title="我的鬼夫太傲娇">我的鬼夫太傲娇</a></h5>
+                        <p>作者：腥甜</p>
+                        <p><em>悬疑灵异</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45359.html"><img src="~/images/thumb_72_96_j4crn0sv1i2.jpg" alt="重生之逍遥小司命"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45359.html" title="重生之逍遥小司命">重生之逍遥小司命</a></h5>
+                        <p>作者：泽被苍生</p>
+                        <p><em>穿越重生</em></p>
+                    </li>
+                </ul>				<ul class="clearfix" style="display:none">
+                    <li class="first">
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/zt/15.html"><img src="~/images/thumb_262_118_5ae0355697b49.png" alt="奇幻小说"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/zt/15.html" title="奇幻小说">奇幻小说</a></h5>
+                        <p>二筒文学网奇幻小说频道为您提供最新最热门的奇幻小说推荐，包括好看的奇幻小说完本推荐、奇幻小说排行榜等精彩好书。</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45383.html"><img src="~/images/thumb_72_96_a3hcb3igkrk.jpg" alt="情深无觅处徐若思"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45383.html" title="情深无觅处徐若思">情深无觅处徐若思</a></h5>
+                        <p>作者：知否</p>
+                        <p><em>古代言情</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45377.html"><img src="~/images/thumb_72_96_4m0wmkv0opa.jpg" alt="隐婚霍少：重生辣妻套路深"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45377.html" title="隐婚霍少：重生辣妻套路深">隐婚霍少：重生辣妻套路深</a></h5>
+                        <p>作者：壬心</p>
+                        <p><em>现代言情</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45374.html"><img src="~/images/thumb_72_96_2ch4rwx2eps.jpg" alt="天命凰归：废材逆袭九小姐"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45374.html" title="天命凰归：废材逆袭九小姐">天命凰归：废材逆袭九小姐</a></h5>
+                        <p>作者：九红兮宝</p>
+                        <p><em>仙侠奇缘</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45373.html"><img src="~/images/thumb_72_96_jy51o53niiy.jpg" alt="青春荒唐不负你"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45373.html" title="青春荒唐不负你">青春荒唐不负你</a></h5>
+                        <p>作者：爱上萌面叔叔</p>
+                        <p><em>现代言情</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45362.html"><img src="~/images/thumb_72_96_5cf2227923d32.jpg" alt="嚣张庶女，撩个邪王入怀"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45362.html" title="嚣张庶女，撩个邪王入怀">嚣张庶女，撩个邪王入怀</a></h5>
+                        <p>作者：郁芳芳</p>
+                        <p><em>古代言情</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45355.html"><img src="~/images/thumb_72_96_ippyob31fsy.jpg" alt="刺痛的婚姻"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45355.html" title="刺痛的婚姻">刺痛的婚姻</a></h5>
+                        <p>作者：半夏</p>
+                        <p><em>都市生活  </em></p>
+                    </li>
+                </ul>				<ul class="clearfix" style="display:none">
+                    <li class="first">
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/zt/7.html"><img src="~/images/thumb_262_118_5ad97eaa979b0.png" alt="虐恋小说"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/zt/7.html" title="虐恋小说">虐恋小说</a></h5>
+                        <p>二筒文学网虐恋小说频道为您提供最新最热门的虐恋小说推荐，包括好看的虐恋小说完本推荐、虐恋小说排行榜等精彩好书。</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45383.html"><img src="~/images/thumb_72_96_a3hcb3igkrk.jpg" alt="情深无觅处徐若思"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45383.html" title="情深无觅处徐若思">情深无觅处徐若思</a></h5>
+                        <p>作者：知否</p>
+                        <p><em>古代言情</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45381.html"><img src="~/images/thumb_72_96_wf45epsu5la.jpg" alt="张子陵重回地球找妹妹"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45381.html" title="张子陵重回地球找妹妹">张子陵重回地球找妹妹</a></h5>
+                        <p>作者：勿小悟</p>
+                        <p><em>都市生活  </em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45378.html"><img src="~/images/thumb_72_96_gnewrydw1d1.jpg" alt="蜜爱1v1：席少，轻点宠"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45378.html" title="蜜爱1v1：席少，轻点宠">蜜爱1v1：席少，轻点宠</a></h5>
+                        <p>作者：陈慢慢</p>
+                        <p><em>现代言情</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45374.html"><img src="~/images/thumb_72_96_2ch4rwx2eps.jpg" alt="天命凰归：废材逆袭九小姐"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45374.html" title="天命凰归：废材逆袭九小姐">天命凰归：废材逆袭九小姐</a></h5>
+                        <p>作者：九红兮宝</p>
+                        <p><em>仙侠奇缘</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45371.html"><img src="~/images/thumb_72_96_o3fzbti1seu.jpg" alt="我的深情，你不配"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45371.html" title="我的深情，你不配">我的深情，你不配</a></h5>
+                        <p>作者：大胡子老黄</p>
+                        <p><em>豪门总裁</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45363.html"><img src="~/images/thumb_72_96_0fqngp1tv3l.jpg" alt="千娇百媚"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45363.html" title="千娇百媚">千娇百媚</a></h5>
+                        <p>作者：惊情之年</p>
+                        <p><em>都市生活  </em></p>
+                    </li>
+                </ul>				<ul class="clearfix" style="display:none">
+                    <li class="first">
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/zt/8.html"><img src="~/images/thumb_262_118_5ad981c6637fe.png" alt="架空小说"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/zt/8.html" title="架空小说">架空小说</a></h5>
+                        <p>二筒文学网架空小说频道为您提供最新最热门的架空小说推荐，包括好看的架空小说完本推荐、架空小说排行榜等精彩好书。</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45386.html"><img src="~/images/thumb_72_96_z2abop20qfk.png" alt="最强商人"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45386.html" title="最强商人">最强商人</a></h5>
+                        <p>作者：呼噜</p>
+                        <p><em>都市生活  </em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45384.html"><img src="~/images/thumb_72_96_r0jru2iycap.jpg" alt="爱你十分泪九分"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45384.html" title="爱你十分泪九分">爱你十分泪九分</a></h5>
+                        <p>作者：知否</p>
+                        <p><em>古代言情</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45383.html"><img src="~/images/thumb_72_96_a3hcb3igkrk.jpg" alt="情深无觅处徐若思"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45383.html" title="情深无觅处徐若思">情深无觅处徐若思</a></h5>
+                        <p>作者：知否</p>
+                        <p><em>古代言情</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45382.html"><img src="~/images/thumb_72_96_dfvdlp0gc3e.jpg" alt="爹地别闹，帮你追媳妇呢！"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45382.html" title="爹地别闹，帮你追媳妇呢！">爹地别闹，帮你追媳妇呢！</a></h5>
+                        <p>作者：殷小妍</p>
+                        <p><em>豪门总裁</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45370.html"><img src="~/images/thumb_72_96_srlrm2cygdd.jpg" alt="女鬼住隔壁"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45370.html" title="女鬼住隔壁">女鬼住隔壁</a></h5>
+                        <p>作者：鸿老九</p>
+                        <p><em>悬疑灵异</em></p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45367.html"><img src="~/images/thumb_72_96_sq0b4sgkmq2.jpg" alt="野蛮女上司"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45367.html" title="野蛮女上司">野蛮女上司</a></h5>
+                        <p>作者：梅三弄</p>
+                        <p><em>都市生活  </em></p>
+                    </li>
+                </ul>
+            </div>
+            <!--review-->
+            <div class="review">
+                <h3>网友评论</h3>
+                <div class="review-form">
+                    <p class="form-item">
+                        <textarea class="j-textarea" rows="3">说点什么吧，您的评论是对本书最大的支持！</textarea>
+                    </p>
+                    <p class="form-btns">
+                        <span class="count">还可以输入<em class="j-count">200</em>字</span>
+                        <button class="j-send" type="submit">发表评论</button>
+                    </p>
+                    <p class="form-msg"></p>
+                </div>
+                <div class="more"><a href="javascript:void(0);">查看全部评论</a></div>
+            </div>
+        </div>
+        <!--primary-->
+        <!--side-->
+        <div class="side-bar">
+            <!--book-other-->
+            <!--hot-tags-->
+            <div class="hot-tags">
+                <h3>热门专题</h3>
+                <ul>
+                    <li><a href="https://www.ertongtuku.com/yuedu/zt/25.html" target="_blank"><img src="~/images/thumb_260_117_5b162736df28e.png" alt="好看的总裁"><span>总裁小说</span></a></li>
+                    <li><a href="https://www.ertongtuku.com/yuedu/zt/24.html" target="_blank"><img src="~/images/thumb_260_117_5b16271a6c29c.png" alt="好看的豪门"><span>豪门小说</span></a></li>
+                    <li><a href="https://www.ertongtuku.com/yuedu/zt/23.html" target="_blank"><img src="~/images/thumb_260_117_5ae0374927643.png" alt="好看的现代"><span>现代小说</span></a></li>
+                </ul>
+            </div>
+            <!--new-book-->
+            <div class="new-book">
+                <h3>推荐小说</h3>
+                <ul>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45295.html" target="_blank"><img class="lazy" src="~/images/thumb_50_75_4y5c4wr141a.jpg" alt="云少，有妖妻"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45295.html" target="_blank">云少，有妖妻</a></h5>
+                        <p>作者：温若离</p>
+                        <p>分类：现代言情</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45198.html" target="_blank"><img class="lazy" src="~/images/thumb_50_75_4sypzx2fzll.jpg" alt="拆房补婚，总裁请淡定"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45198.html" target="_blank">拆房补婚，总裁请淡定</a></h5>
+                        <p>作者：月光</p>
+                        <p>分类：现代言情</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45160.html" target="_blank"><img class="lazy" src="~/images/thumb_50_75_nufw0sitisf.jpg" alt="嗜宠成婚：惹火娇妻送上门"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45160.html" target="_blank">嗜宠成婚：惹火娇妻送上门</a></h5>
+                        <p>作者：木清影</p>
+                        <p>分类：现代言情</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/45121.html" target="_blank"><img class="lazy" src="~/images/thumb_50_75_nm0dza10szk.jpg" alt="失婚妻子的逆袭"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/45121.html" target="_blank">失婚妻子的逆袭</a></h5>
+                        <p>作者：云姜公主</p>
+                        <p>分类：现代言情</p>
+                    </li>
+                    <li>
+                        <a class="pic" href="https://www.ertongtuku.com/yuedu/xiaoshuo/44964.html" target="_blank"><img class="lazy" src="~/images/thumb_50_75_gl54echscuq.jpg" alt="重生娇妻：古少一宠成瘾"></a>
+                        <h5><a href="https://www.ertongtuku.com/yuedu/xiaoshuo/44964.html" target="_blank">重生娇妻：古少一宠成瘾</a></h5>
+                        <p>作者：清风风</p>
+                        <p>分类：现代言情</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/side-->
+    </div>
+</div>
+<script src="~/js/qrcode.js"></script>
+<script type="text/javascript">
+    //生成当前URL二维码
+    var str = 'http:///yuedu/xiaoshuo/45383.html';
+    $("#j-qrcode").qrcode({ width: 144, height: 144, text: str });
+    $('#show-more').click(function () {
+        $('.book-info .reading-content .content').height('auto');
+        $(this).hide();
+    });
+</script>
+<!--/container-->
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ee895bd9613f8d26917ff438e7904477";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<script src="~/js/layer.js"></script>
+<div id="novel_id" data-id="45383"></div>
+<script type="text/javascript">
+
+    var weixin_name = "二哈文学";
+
+    $('.reading').on('click', function () {
+        if ($(this).attr('data-url') != '') {
+            window.location.href = $(this).attr('data-url');
+            return false;
+        } else {
+            layer.open({
+                type: 1,
+                title: '',
+                area: ['460px', '320px'],
+                shadeClose: true,
+                content: '<div style="width:100%;text-align:center;margin-top:1.5rem;font-size:14px"><img style="width:200px;height:200px" src="https://wx.lol123.net/weixin/erha.jpg"><p style="padding-top:10px">扫一扫二维码 或者</p><p style="padding-top:10px">关注微信公众号：<span style="color:red">' + weixin_name + '</span></p><p style="padding-top:10px">回复：<span style="color:red">情深无觅处徐若思</span> 或者回复书号 <span style="color:red">4799</span> 阅读全文</p></div>'
+            });
+        }
+    });
+
+</script>

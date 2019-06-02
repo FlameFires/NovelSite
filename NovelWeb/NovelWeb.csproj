@@ -13,11 +13,11 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\BookImgs\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\Assets\CSS\layui.css" />
-    <None Include="wwwroot\Assets\CSS\layui.mobile.css" />
     <None Include="wwwroot\Assets\CSS\modules\code.css" />
     <None Include="wwwroot\Assets\CSS\modules\laydate\default\laydate.css" />
     <None Include="wwwroot\Assets\CSS\modules\layer\default\icon-ext.png" />
@@ -105,26 +105,26 @@
     <None Include="wwwroot\Assets\Imgs\face\9.gif" />
     <None Include="wwwroot\Assets\JS\layui.all.js" />
     <None Include="wwwroot\Assets\JS\layui.js" />
-    <None Include="wwwroot\Assets\modules\carousel.js" />
-    <None Include="wwwroot\Assets\modules\code.js" />
-    <None Include="wwwroot\Assets\modules\colorpicker.js" />
-    <None Include="wwwroot\Assets\modules\element.js" />
-    <None Include="wwwroot\Assets\modules\flow.js" />
-    <None Include="wwwroot\Assets\modules\form.js" />
-    <None Include="wwwroot\Assets\modules\jquery.js" />
-    <None Include="wwwroot\Assets\modules\laydate.js" />
-    <None Include="wwwroot\Assets\modules\layedit.js" />
-    <None Include="wwwroot\Assets\modules\layer.js" />
-    <None Include="wwwroot\Assets\modules\laypage.js" />
-    <None Include="wwwroot\Assets\modules\laytpl.js" />
-    <None Include="wwwroot\Assets\modules\mobile.js" />
-    <None Include="wwwroot\Assets\modules\rate.js" />
-    <None Include="wwwroot\Assets\modules\slider.js" />
-    <None Include="wwwroot\Assets\modules\table.js" />
-    <None Include="wwwroot\Assets\modules\transfer.js" />
-    <None Include="wwwroot\Assets\modules\tree.js" />
-    <None Include="wwwroot\Assets\modules\upload.js" />
-    <None Include="wwwroot\Assets\modules\util.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\carousel.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\code.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\colorpicker.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\element.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\flow.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\form.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\jquery.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\laydate.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\layedit.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\layer.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\laypage.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\laytpl.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\mobile.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\rate.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\slider.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\table.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\transfer.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\tree.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\upload.js" />
+    <None Include="wwwroot\Assets\JS\lay\modules\util.js" />
   </ItemGroup>
 
   <ItemGroup>
