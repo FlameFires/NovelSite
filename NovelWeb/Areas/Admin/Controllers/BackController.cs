@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Model;
+using Newtonsoft.Json;
 
 namespace NovelSite.Areas.Admin.Controllers
 {
@@ -79,10 +81,52 @@ namespace NovelSite.Areas.Admin.Controllers
         #endregion
 
         #region 类型列表
-        public ActionResult TypeList()
+        #region 视图
+        public IActionResult TypeList()
         {
             return View();
         }
+        #endregion
+
+        #region 类型数据源
+        public IActionResult TypeData()
+        {
+            DataTable typedata = Common.DbHelper.SeekData("BookType", "1=1");
+            return Content(JsonConvert.SerializeObject(typedata));
+        }
+
+        //public class Model
+        //{
+        //    public int I
+        //}
+        #endregion
+
+
+        #region 提交类型
+        public IActionResult TypePost(string typename)
+        {
+            int nums = _dbCotext._BookType.Where(e => e.Name == typename & e.ParentId == 0).Count();
+            if (nums > 0)
+            {
+                return Content("2");
+            }
+            else
+            {
+                BookType types = new BookType();
+                types.Name = typename;
+                types.IsHeadShow = true;
+                types.ParentId = 0;
+                _dbCotext._BookType.Add(types);
+                int result = _dbCotext.SaveChanges();
+                if (result > 0)
+                {
+                    return Content("1");
+                }
+            }
+            return Content("2");
+        }
+        #endregion
+
         #endregion
 
         #region 标签列表

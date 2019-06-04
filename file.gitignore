@@ -1,11 +1,12 @@
 # Generated files
-bin/
-obj/
 NovelWeb/bin/
 NovelWeb/obj/
 Common/bin/
 Common/obj/
+Model/bin/
+Model/obj/
 .vs/
 
 # Log Files
 *.log
+*.csproj

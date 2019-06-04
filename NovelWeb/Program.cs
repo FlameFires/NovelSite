@@ -22,18 +22,6 @@ namespace NovelWeb
             host.Run();
         }
 
-        /// <summary>
-        /// 测试
-        /// </summary>
-        /// <param name="args"></param>
-        static void UseParam1(params int[] args)
-        {
-            for (int i = 0; i < args.Length; i++)
-            {
-                Console.WriteLine(args[i] + "...");
-            }
-        }
-
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
